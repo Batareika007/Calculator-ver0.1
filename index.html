@@ -1,13 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Calculator</title>
 </head>
+
 <body>
-    <div>Hello world</div>
+    <div class="wraper">
+        <!-- header -->
+        <header>
+            <div class="container">
+                <nav class="header-flex">
+                    <a href="#" class="header_logo">Calculator</a>
+                    <ul class="header__links">
+                        <li><a href="#">Leng</a> </li>
+                        <li><a href="#">Github</a> </li>
+                        <li><a href="#">LinkedIn</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- sub header -->
+        <div class="sub-header">
+            <div class="container">
+                <p class="sub-header__text">
+                    Here you will calculate how long it takes you to save up for your goal without taking loans from the
+                    bank! It can be anything, a new car, an apartment, a trip around the world. Or just how much money
+                    do you spend and save every month.
+                </p>
+            </div>
+        </div>
+        <!-- Calculator section -->
+
+        <main>
+            <div class="container">
+                <!-- calc header -->
+                <div class="calc-top">
+
+                    <!-- user inser value of goal  -->
+                    <div class="calc-top__section input-box">
+                        <div class="input-box__text">
+                            <h3 class="calc-top__section_header"><label for="value-goal">The cost of your goal:</label>
+                            </h3>
+                            <span class="calc-top__section_text"><label for="value-goal">
+                                    It can be anything, your new home, new car, vocation
+                                    etc...
+                                </label></span>
+                        </div>
+                        <input class="input-box__input" type="number" name="value-goal" id="value-goal">
+                    </div>
+                    <!-- user inser mounty Incom -->
+                    <div class="calc-top__section input-box">
+                        <div class="input-box__text">
+                            <h3 class="calc-top__section_header"><label for="user-income">Insert mounty Incom:</label>
+                            </h3>
+                            <span class="calc-top__section_text"><label for="user-income">all your income after
+                                    taxes</label></span>
+                        </div>
+                        <input class="input-box__input" type="number" name="user-income" id="user-income">
+                    </div>
+                    <div class="calc-top__section input-box">
+                        <div class="input-box__text">
+                            <h3 class="calc-top__section_header"><label for="residential-services">Residential services :</label>
+                            </h3>
+                            <span class="calc-top__section_text"><label for="residential-services">Such as whater, gas,
+                                    electritisy etc.
+                                    if they icluded in rent appartment you can skip this step</label></span>
+                        </div>
+                        <input class="input-box__input" type="number" name="residential-services" id="residential-services" placeholder="0">
+                    </div>
+
+
+                </div>
+                <!-- calc main -->
+                <div class="calc-main">
+                    <div class="calc-main__header">
+                        Calculate all your spendings
+                        including taxes
+                    </div>
+                    <div class="calc-main__cards">
+
+                    </div>
+                    <button> calculate</button>
+                </div>
+
+                <!-- calc footer -->
+
+                <div class="calc-bottom">
+                    <div>
+
+                        Spending per month:
+                        Save per month:
+                        To get your goal you need __ Years
+                    </div>
+                    <div>
+                        Great job! You can reach your goal in less than 10 years.
+                        Not bad ! You can reach your goal between 10 - 20 years
+                        Well ! You can reach your goal between 20 - 30 years
+                        It’s take more then 30 years... You need to increase income or reduce expenses
+                        Any Result that take more then 40 years for your responsibility and your loved ones
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            some text
+        </footer>
+    </div>
 </body>
+
 </html>

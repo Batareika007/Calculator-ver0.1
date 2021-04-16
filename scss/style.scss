@@ -1,5 +1,141 @@
 @import "global.scss";
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
-div{
-    font-size: 14px;
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 18px;
+}
+
+.wraper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+header {
+    padding: 25px 0;
+    background-color: $header-background;
+
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_logo {
+    color: $calc-background;
+}
+
+.header__links {
+    display: flex;
+    flex-direction: row-reverse;
+
+    li {
+        margin-right: 25%;
+
+        a {
+
+            color: $calc-background;
+        }
+
+        &:first-child {
+            margin-right: 0;
+
+        }
+
+
+    }
+}
+
+.sub-header {
+    padding: 25px 0;
+    background-color: $subheader-background;
+    color: $calc-background;
+}
+
+.sub-header__text {
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 582px;
+}
+
+// main section calculator
+main {
+    flex: 1 1 auto;
+    background-color: $calc-background;
+}
+
+
+.input-box {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 1px 1px 0px #000000;
+    border-radius: 13px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.input-box__text {
+    flex: 0 0 230px;
+}
+
+.input-box__input {
+    width: 100px;
+    font-size: 20px;
+    align-self: center;
+}
+
+
+// calculator header, insert incom and goal value
+.calc-top {
+    padding: 50px 0;
+}
+
+.calc-top__section {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+
+
+
+.calc-top__section_header {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.calc-top__section_text {
+    font-size: 16px;
+}
+
+// .calc-main {}
+
+// .calc-main__header {}
+
+// .calc-main__cards {}
+
+// .calc-bottom {}
+
+
+
+// footer
+footer {
+    background-color: $header-background;
+    color: $calc-background;
 }
