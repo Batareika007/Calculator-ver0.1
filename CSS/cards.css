@@ -1,0 +1,54 @@
+html,
+body,
+.grid-container {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  margin: 20px auto;
+  width: 323px;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 231px 1fr;
+      grid-template-columns: 231px 1fr;
+  -ms-grid-rows: 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr 0.5fr;
+  gap: 10px 30px;
+      grid-template-areas: "header input" "text input";
+}
+
+.text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: text;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.input {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: input;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.insert {
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  -webkit-box-shadow: 1px 1px 0px #000000;
+          box-shadow: 1px 1px 0px #000000;
+  border-radius: 13px;
+  padding: 10px;
+}
