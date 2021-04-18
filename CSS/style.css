@@ -117,10 +117,14 @@ body {
 
 header {
   padding: 25px 0;
-  background-color: black;
+  background-color: #2b6778;
 }
 
-.header-flex {
+header a {
+  color: #ffffff;
+}
+
+.header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,11 +133,7 @@ header {
           justify-content: space-between;
 }
 
-.header_logo {
-  color: whitesmoke;
-}
-
-.header__links {
+.header-nav__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,91 +143,145 @@ header {
           flex-direction: row-reverse;
 }
 
-.header__links li {
-  margin-right: 25%;
+.header-nav__links li {
+  padding-right: 15%;
 }
 
-.header__links li a {
-  color: whitesmoke;
+.header-nav__links li:first-child {
+  padding-right: 0;
 }
 
-.header__links li:first-child {
-  margin-right: 0;
+.header-description {
+  background-color: #c8d8e4;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-image: url(../img/no_debts.png), url(../img/any_target.png);
+  background-repeat: no-repeat no-repeat;
+  background-size: auto 100%, auto 100%;
+  background-position: left, right;
 }
 
-.sub-header {
-  padding: 25px 0;
-  background-color: #2e2e2e;
-  color: whitesmoke;
-}
-
-.sub-header__text {
-  line-height: 1.6;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 582px;
-}
-
-main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  background-color: whitesmoke;
-}
-
-.input-box {
-  overflow: hidden;
-  margin: 0 auto;
-  max-width: 400px;
-  padding: 10px;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  -webkit-box-shadow: 1px 1px 0px #000000;
-          box-shadow: 1px 1px 0px #000000;
-  border-radius: 13px;
+.header-description .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.header-description .container > p {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 390px;
+          flex: 0 1 390px;
+  margin: 0 auto;
+  max-width: 590px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(200, 216, 228, 0.452);
+}
+
+main {
+  padding: 25px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cards__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.input-box__text {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 230px;
-          flex: 0 0 230px;
+.card__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 230px auto;
+      grid-template-columns: 230px auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  gap: 0px 20px;
+      grid-template-areas: "card__header card__input" "card__text card__input";
 }
 
-.input-box__input {
-  width: 100px;
-  font-size: 20px;
+.card__header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: card__header;
+}
+
+.card__text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card__text;
+}
+
+.card__input {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: card__input;
+}
+
+.card__input input:focus {
+  -webkit-box-shadow: 0px 0px 2px 2px #80FFD4, inset 0px 0px 2px 2px #80FFD4;
+          box-shadow: 0px 0px 2px 2px #80FFD4, inset 0px 0px 2px 2px #80FFD4;
+}
+
+.card {
+  width: 350px;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #2b6778;
+  margin-bottom: 10px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card .card__header {
+  font-weight: 700;
+  color: #fff;
+}
+
+.card .card__text {
+  color: #b3b3b3;
+  font-size: 16px;
+}
+
+.card .card__input {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.calc-top {
-  padding: 50px 0;
-}
-
-.calc-top__section {
-  margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.calc-top__section_header {
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-.calc-top__section_text {
-  font-size: 16px;
-}
-
-footer {
-  background-color: black;
-  color: whitesmoke;
+.card .card__input input {
+  width: 80px;
+  text-align: right;
+  font-size: 18px;
+  padding: 1px 0 2px 7px;
+  border-radius: 7px;
 }

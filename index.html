@@ -14,9 +14,9 @@
         <!-- header -->
         <header>
             <div class="container">
-                <nav class="header-flex">
+                <nav class="header-nav">
                     <a href="#" class="header_logo">Calculator</a>
-                    <ul class="header__links">
+                    <ul class="header-nav__links">
                         <li><a href="#">Leng</a> </li>
                         <li><a href="#">Github</a> </li>
                         <li><a href="#">LinkedIn</a> </li>
@@ -24,87 +24,218 @@
                 </nav>
             </div>
         </header>
-        <!-- sub header -->
-        <div class="sub-header">
+        <div class="header-description">
             <div class="container">
-                <p class="sub-header__text">
+                <p>
                     Here you will calculate how long it takes you to save up for your goal without taking loans from the
-                    bank! It can be anything, a new car, an apartment, a trip around the world. Or just how much money
-                    do you spend and save every month.
+                    bank!
+                </p>
+                <p>
+
+                    It can be anything, a new car, an apartment, a trip around the world.
+                    Or just how much money do you spend and save every month.
+
                 </p>
             </div>
         </div>
         <!-- Calculator section -->
 
         <main>
+
             <div class="container">
-                <!-- calc header -->
-                <div class="calc-top">
-
-                    <!-- user inser value of goal  -->
-                    <div class="calc-top__section input-box">
-                        <div class="input-box__text">
-                            <h3 class="calc-top__section_header"><label for="value-goal">The cost of your goal:</label>
-                            </h3>
-                            <span class="calc-top__section_text"><label for="value-goal">
-                                    It can be anything, your new home, new car, vocation
-                                    etc...
-                                </label></span>
+                <!-----------------------    cards sections    -------------------------->
+                <div class="cards__section">
+                    <!-- card Rent appartment -->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Rent appartment </div>
+                            <div class="card__text">
+                                mounty spending for renting appartment
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
                         </div>
-                        <input class="input-box__input" type="number" name="value-goal" id="value-goal">
                     </div>
-                    <!-- user inser mounty Incom -->
-                    <div class="calc-top__section input-box">
-                        <div class="input-box__text">
-                            <h3 class="calc-top__section_header"><label for="user-income">Insert mounty Incom:</label>
-                            </h3>
-                            <span class="calc-top__section_text"><label for="user-income">all your income after
-                                    taxes</label></span>
+                    <!-------------------- card Residential services --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Residential services</div>
+                            <div class="card__text">
+                                Such as whater, gas, electritisy etc. If they included in rent appartment you can skip
+                                this
+                                step
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
                         </div>
-                        <input class="input-box__input" type="number" name="user-income" id="user-income">
                     </div>
-                    <div class="calc-top__section input-box">
-                        <div class="input-box__text">
-                            <h3 class="calc-top__section_header"><label for="residential-services">Residential services :</label>
-                            </h3>
-                            <span class="calc-top__section_text"><label for="residential-services">Such as whater, gas,
-                                    electritisy etc.
-                                    if they icluded in rent appartment you can skip this step</label></span>
+                    <!-------------------- card  Food --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Food</div>
+                            <div class="card__text">
+                                mounty spending for food ( not included fast food restourans) </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
                         </div>
-                        <input class="input-box__input" type="number" name="residential-services" id="residential-services" placeholder="0">
                     </div>
-
+                    <!-------------------- card  Medicine --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Medicine</div>
+                            <div class="card__text">
+                                mounty spendind for life insurance, medications, procedures, etc.
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card  Public Transport  --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Public Transport </div>
+                            <div class="card__text">
+                                mounty spendind for publick transport, bus, train, taxies, etc
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card  Mobile and Internet --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Mobile and Internet</div>
+                            <div class="card__text">
+                                mounty spending for cellular and home internet
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card Private Transport   --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Private Transport </div>
+                            <div class="card__text">
+                                mounty spendind for private transfor, car/ bike, gas, insurance etc...
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                <!-- calc main -->
-                <div class="calc-main">
-                    <div class="calc-main__header">
-                        Calculate all your spendings
-                        including taxes
+                    <div class="cards__section">
+                        
+                    <!-------------------- card Bank debts   --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Bank debts </div>
+                            <div class="card__text">
+                                Any Banks and credic cards debs
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
                     </div>
-                    <div class="calc-main__cards">
+                    <!-------------------- card  Clothers --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Clothers</div>
+                            <div class="card__text">
+                                monty spending for clother such as jeans, shose, tshirts, dresses etc
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card Entertainment  --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Entertainment</div>
+                            <div class="card__text">
+                                movies, games, teatrs, shows, shoping
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card  Study / School / Institut --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Study / School / Institut</div>
+                            <div class="card__text">
+                                monty spending for knowleg, include children school, institut, courses
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card  Restorant --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Restorant</div>
+                            <div class="card__text">
+                                mounty spending for Restorant and fast food places
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card Children  --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Children</div>
+                            <div class="card__text">
+                                Any mounty additional spending for children
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card  Daily Spending --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Residential services</div>
+                            <div class="card__text">
+                                daily spending such as coffee, dinners, etc... (will multiply by 30)
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------- card  Any other mounty spending  --------------------------->
+                    <div class="card">
+                        <div class="card__container">
+                            <div class="card__header">Any other mounty spending</div>
+                            <div class="card__text">
+                                any spending that not in list.
+                            </div>
+                            <div class="card__input">
+                                <input type="number" class="card__input insert">
+                            </div>
+                        </div>
+                    </div>
 
-                    </div>
-                    <button> calculate</button>
                 </div>
 
-                <!-- calc footer -->
 
-                <div class="calc-bottom">
-                    <div>
 
-                        Spending per month:
-                        Save per month:
-                        To get your goal you need __ Years
-                    </div>
-                    <div>
-                        Great job! You can reach your goal in less than 10 years.
-                        Not bad ! You can reach your goal between 10 - 20 years
-                        Well ! You can reach your goal between 20 - 30 years
-                        It’s take more then 30 years... You need to increase income or reduce expenses
-                        Any Result that take more then 40 years for your responsibility and your loved ones
-                    </div>
-                </div>
+
             </div>
         </main>
 

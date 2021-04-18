@@ -1,5 +1,5 @@
 @import "global.scss";
-@import "variables.scss";
+@import "colors.scss";
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
 body {
@@ -23,121 +23,150 @@ body {
 
 header {
     padding: 25px 0;
-    background-color: $header-background;
+    background-color: $header-cards-background-color;
 
+    a {
+        color: $header-links-color;
+    }
 }
 
-.header-flex {
+.header-nav {
     display: flex;
     justify-content: space-between;
 }
 
-.header_logo {
-    color: $calc-background;
-}
-
-.header__links {
+.header-nav__links {
     display: flex;
     flex-direction: row-reverse;
 
     li {
-        margin-right: 25%;
-
-        a {
-
-            color: $calc-background;
-        }
+        padding-right: 15%;
 
         &:first-child {
-            margin-right: 0;
-
+            padding-right: 0;
         }
-
-
     }
 }
 
-.sub-header {
-    padding: 25px 0;
-    background-color: $subheader-background;
-    color: $calc-background;
-}
+.header-description {
+    background-color: $body-background-color;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-image: url(../img/no_debts.png),
+        url(../img/any_target.png);
+    background-repeat: no-repeat no-repeat;
+    background-size: auto 100%,
+        auto 100%;
+    background-position: left,
+        right;
 
-.sub-header__text {
-    line-height: 1.6;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 582px;
+
+
+    .container {
+
+        display: flex;
+
+        >p {
+            flex: 0 1 390px;
+            margin: 0 auto;
+            max-width: 590px;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            background-color: hsla(206, 34%, 84%, 0.452);
+
+        }
+    }
+
 }
 
 // main section calculator
 main {
+    padding: 25px 0;
     flex: 1 1 auto;
-    background-color: $calc-background;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
-
-.input-box {
-    margin: 0 auto;
-    max-width: 400px;
-    padding: 10px;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-shadow: 1px 1px 0px #000000;
-    border-radius: 13px;
+.cards__section {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-
-
-}
-
-.input-box__text {
-    flex: 0 0 230px;
-}
-
-.input-box__input {
-    width: 100px;
-    font-size: 20px;
-    align-self: center;
-}
-
-
-// calculator header, insert incom and goal value
-
-
-.calc-top {
-    padding: 50px 0;
-}
-
-.calc-top__section {
     margin-bottom: 10px;
-    display: flex;
 }
 
+// ----------- card style grid start ----------------- // 
 
 
-
-.calc-top__section_header {
-    margin-bottom: 5px;
-    font-weight: 700;
+.card__container {
+    display: grid;
+    grid-template-columns: 230px auto;
+    grid-template-rows: auto auto;
+    gap: 0px 20px;
+    grid-template-areas:
+        "card__header card__input"
+        "card__text card__input";
 }
 
-.calc-top__section_text {
-    font-size: 16px;
+.card__header {
+    grid-area: card__header;
 }
 
-// .calc-main {}
-
-// .calc-main__header {}
-
-// .calc-main__cards {}
-
-// .calc-bottom {}
-
-
-
-// footer
-footer {
-    background-color: $header-background;
-    color: $calc-background;
+.card__text {
+    grid-area: card__text;
 }
+
+.card__input {
+    grid-area: card__input;
+
+    input {
+
+        &:focus {
+            box-shadow: 0px 0px 2px 2px #80FFD4,
+                inset 0px 0px 2px 2px #80FFD4;
+        }
+    }
+}
+
+.card {
+
+    width: 350px;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: $header-cards-background-color;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+
+    .card__header {
+        font-weight: 700;
+        color: #fff;
+
+    }
+
+    .card__text {
+        color: $cards-text-color;
+        font-size: 16px;
+    }
+
+    .card__input {
+        align-self: center;
+
+        input {
+            width: 80px;
+            text-align: right;
+            font-size: 18px;
+            padding: 1px 0 2px 7px;
+            border-radius: 7px;
+        }
+    }
+}
+
+// --------------------------------    card end
